@@ -45,6 +45,7 @@ case class GeometryKRingExplode(geom: Expression, resolution: Expression, k: Exp
             Seq.empty
         } else {
             val geometryVal = geometryAPI.geometry(geometryRaw, geom.dataType)
+            print("geometryRaw", geometryRaw)
             val resolutionVal = indexSystem.getResolution(resolutionRaw)
             val kVal = kRaw.asInstanceOf[Int]
 
